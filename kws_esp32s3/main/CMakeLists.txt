@@ -1,0 +1,18 @@
+idf_component_register(
+    SRCS
+        "main.cc"
+        "audio_capture.cc"
+        "mfcc_processor.cc"
+        "kws_inference.cc"
+        "device_control.cc"
+        "model/kws_model_data.cc"
+    INCLUDE_DIRS
+        "."
+        "model"
+    REQUIRES
+        esp-tflite-micro
+        driver
+        esp_timer
+        freertos
+        espressif__esp-dsp
+)
